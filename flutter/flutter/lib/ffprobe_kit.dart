@@ -76,7 +76,12 @@ class FFprobeKit {
   }
 
   /// Extracts media information for the file specified with path.
-  static Future<MediaInformationSession> getMediaInformation(String path, [int? waitTimeout = null]) async {
+  static Future<MediaInformationSession> getMediaInformation(
+    String path, {
+    int? waitTimeout,
+    String? referer,
+    String? origin,
+  }) async {
     final commandArguments = [
       "-v",
       "error",
@@ -89,6 +94,15 @@ class FFprobeKit {
       "-i",
       path,
     ];
+
+    // Add headers if provided
+    if (referer != null) {
+      commandArguments.addAll(["-headers", "Referer: $referer"]);
+    }
+    if (origin != null) {
+      commandArguments.addAll(["-headers", "Origin: $origin"]);
+    }
+
     return FFprobeKit.getMediaInformationFromCommandArguments(commandArguments, waitTimeout);
   }
 
