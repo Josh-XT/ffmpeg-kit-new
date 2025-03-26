@@ -44,10 +44,11 @@ rootProject.allprojects {
 
 
 dependencies {
-    implementation 'androidx.annotation:annotation:1.5.0'
-    implementation 'com.arthenica:ffmpeg-kit-https:6.0-2.LTS' // Dependency from local Maven repository
-    implementation 'com.arthenica:smart-exception-java:0.2.1' // Dependency from Live
-    implementation 'com.arthenica:smart-exception-common:0.2.1' // Dependency from Live
+      implementation('androidx.annotation:annotation:1.5.0')
+      implementation('com.arthenica:ffmpeg-kit-https:6.0-2.LTS') // Dependency from local Maven repository
+      implementation('com.arthenica:smart-exception-java:0.2.1') // Dependency from Live
+      implementation('com.arthenica:smart-exception-common:0.2.1') // Dependency from Live
+
 
     // Uncomment the lines below if using local JAR files instead
     // implementation files('libs/smart-exception-java-0.2.1.jar') // Dependency from local libs folder
