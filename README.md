@@ -2,7 +2,7 @@
 
 # Using ffmpeg-kit-https:6.0-2.LTS AAR from Local Maven (You can use your preferred AAR file)
 
-## This project using latest flutter_3.29
+## This project using latest flutter_3.29.2 (stable)
 
 # AAR Binary Files Installation Guide
 
@@ -55,6 +55,16 @@ dependencies {
     // implementation files('libs/smart-exception-common-0.2.1.jar') // Dependency from local libs folder
 }
 ```
+
+You can also use this repo in your app, but make sure the AAR file is installed in your local Maven:
+
+```yaml
+  ffmpeg_kit_flutter:
+    git:
+      url: https://github.com/nightmarefsm/ffmpeg-kit-new
+      ref: flutter_3.29_standard
+      path: flutter/flutter
+  ```
 
 
 
