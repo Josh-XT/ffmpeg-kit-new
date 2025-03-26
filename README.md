@@ -38,7 +38,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        mavenLocal()
+        mavenLocal() // must add this line
     }
 }
 
