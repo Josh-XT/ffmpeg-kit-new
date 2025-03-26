@@ -4,6 +4,50 @@
 
 # Using ffmpeg-kit-https:6.0-2.LTS AAR from local Maven
 
+# AAR Binary Files Installation Guide
+
+This guide will walk you through the process of downloading, installing, and using the `ffmpeg-kit-https` AAR file from your local Maven repository.
+
+### Download AAR Binary Files  
+
+You can download all available AAR binary files from the link below:  
+
+[Download AAR Files](https://drive.google.com/file/d/1jRhgfd7fjzpuOvVWXOhnr_Uzui0fJszf/view?usp=sharing)  
+
+### Install AAR File to Local Maven  
+
+Make sure your system has Maven installed.  
+
+Run the following command to install the AAR file to your local Maven repository:  
+
+```sh
+mvn install:install-file \
+  -Dfile=ffmpeg-kit-https-6.0-2.LTS.aar \
+  -DgroupId=com.arthenica \
+  -DartifactId=ffmpeg-kit-https \
+  -Dversion=6.0-2.LTS \
+  -Dpackaging=aar
+```
+
+### Add Dependencies to build.gradle
+
+Once the AAR file is installed in your local Maven repository, you can add it as a dependency in your build.gradle file.
+
+```gradle
+dependencies {
+    implementation 'androidx.annotation:annotation:1.5.0'
+    implementation 'com.arthenica:ffmpeg-kit-https:6.0-2.LTS' // Dependency from local Maven repository
+    implementation 'com.arthenica:smart-exception-java:0.2.1' // Dependency from Live
+    implementation 'com.arthenica:smart-exception-common:0.2.1' // Dependency from Live
+
+    // Uncomment the lines below if using local JAR files instead
+    // implementation files('libs/smart-exception-java-0.2.1.jar') // Dependency from local libs folder
+    // implementation files('libs/smart-exception-common-0.2.1.jar') // Dependency from local libs folder
+}
+```
+
+
+
 <img src="https://github.com/arthenica/ffmpeg-kit/blob/main/docs/assets/ffmpeg-kit-icon-v9.png" width="240">
 
 `FFmpegKit` is a collection of tools to use `FFmpeg`<sup>1</sup> in `Android`, `iOS`, `Linux`, `macOS`, `tvOS`, `Flutter` and `React Native` applications.
