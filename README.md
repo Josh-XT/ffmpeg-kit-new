@@ -10,7 +10,7 @@ This guide will walk you through the process of downloading, installing, and usi
 
 ### Download AAR Binary Files  
 
-You can download all available AAR binary files from the link below:  
+You can download all available FFMPEG AAR binary files from the link below:  
 
 [Download AAR Files](https://drive.google.com/file/d/1jRhgfd7fjzpuOvVWXOhnr_Uzui0fJszf/view?usp=sharing)  
 
