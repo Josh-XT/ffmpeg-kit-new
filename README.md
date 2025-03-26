@@ -34,6 +34,15 @@ mvn install:install-file \
 Once the AAR file is installed in your local Maven repository, you can add it as a dependency in your build.gradle file.
 
 ```gradle
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+
 dependencies {
     implementation 'androidx.annotation:annotation:1.5.0'
     implementation 'com.arthenica:ffmpeg-kit-https:6.0-2.LTS' // Dependency from local Maven repository
